@@ -62,12 +62,12 @@ popupNoweWokno ()
 
 WA.room.showLayer('kamjenje')
 
-WA.room.onEnterLayer('Smn-stom').subscribe(() => {
+WA.room.onEnterLayer('MiC-stom').subscribe(() => {
     console.log('sym pri stomu.') 
     //WA.room.showLayer('bul')
 
 })
-WA.room.onEnterLayer('Smn-bul').subscribe(() => {
+WA.room.onEnterLayer('MiC-bul').subscribe(() => {
     console.log('sym pri bulu.')
 })
 
