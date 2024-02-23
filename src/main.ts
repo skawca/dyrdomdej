@@ -6,6 +6,8 @@ import {popupNoweWokno} from './akcije/popup';
 import { teleport } from "./akcije/teleport-simon";
 import { skocDoSwetaKilian } from "./akcije/skok-do-sweta-kilian";
 import {beamMiC} from "./akcije/beaming-karta-MiC";
+import { steveQuest } from "./akcije/steve-quest";
+import { hrow } from "./akcije/hrow";
 
 
 // definicija wariablow
@@ -38,7 +40,8 @@ teleport()
 skocDoSwetaKilian()
 popupNoweWokno ()
 beamMiC ()
-
+steveQuest()
+hrow()
 // loggwac sto su koordinaty wot mužika
     WA.player.onPlayerMove((data)=>{
     const {x,y, oldX, oldY} = data
