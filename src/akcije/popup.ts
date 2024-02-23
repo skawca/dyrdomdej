@@ -3,7 +3,7 @@ const mamaspew = WA.sound.loadSound('/src/hudzba/mamaspew.mp3')
 const confighudzba = {
     volume: 0.2,
     loop: true,
-    rate: 3,
+    rate: 1,
     detune: 1,
     delay: 0,
     mute: false,
@@ -22,16 +22,16 @@ const configtrompeta = {
         }
 
 export const popupNoweWokno = () => {
-WA.ui.openPopup('wokno', 'Hallo swet', [
+WA.ui.openPopup('wokno', 'Konsum', [
     {
         // knefl zatwaric
-        label:'Zacin běž',
+        label:'ćěr so',
         callback: async (popup) => { 
       
             //Mužik běži ke koordinaće          
       await WA.player.moveTo(0,0,10);
-      await WA.player.moveTo(500,280,10);
-      await WA.player.moveTo(300,0,10)
+      await WA.player.moveTo(600,0,10);
+      await WA.player.moveTo(400,600,10)
       
       // wokno so zacini    
       // popup.close()
@@ -53,8 +53,16 @@ WA.ui.openPopup('wokno', 'Hallo swet', [
     
 ])
 
+// WA.ui.openPopup('wokno2', 'změn počas', [
+// {
+    // knefl zatwaric
+ //    label:'zyma',
+  //   callback: async (popup) => { 
 
-WA.ui.openPopup('wokno2', 'Ty sy tajka hipotata', [])
+// }
+
+
+// ])
 }
 
 
