@@ -2,15 +2,14 @@
 
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 import { wulicDistancu } from "./pomocnik/wulic-distancu";
-import {popupNoweWokno} from './akcije/popup';
+import { popupNoweWokno } from './akcije/popup';
 import { teleport } from "./akcije/teleport-simon";
 import { skocDoSwetaKilian } from "./akcije/skok-do-sweta-kilian";
-import {beamMiC} from "./akcije/beaming-karta-MiC";
+import { beamMiC} from "./akcije/beaming-karta-MiC";
 import { steveQuest } from "./akcije/steve-quest";
 import { hrow } from "./akcije/hrow";
 import { wobydlerjo } from "./akcije/wobydler";
 import { kirbs } from "./akcije/kirbs";
-
 
 // definicija wariablow
 let dotkanje = 0
@@ -18,9 +17,9 @@ let dotkanje = 0
 // soundy a hudzba
 const mamaspew = WA.sound.loadSound('/src/hudzba/mamaspew.mp3')
 const confighudzba = {
-    volume: 0.2,
+    volume: 0.5,
     loop: true,
-    rate: 1.5,
+    rate: 3,
     detune: 1,
     delay: 0,
     mute: false,
@@ -38,14 +37,15 @@ const confighudzba = {
 // Waiting for the API to be ready
 WA.onInit().then(() => {
 
+popupNoweWokno ()
 teleport()
 skocDoSwetaKilian()
-popupNoweWokno ()
 beamMiC ()
 steveQuest()
 hrow()
 wobydlerjo()
 kirbs()
+
 
 // loggwac sto su koordinaty wot mužika
     WA.player.onPlayerMove((data)=>{
@@ -62,25 +62,36 @@ kirbs()
     })
 
 // wot jedneho mestna k tamnemu skocic
-//WA.room.onEnterLayer('dzera').subscribe(()=>{
-    //dotkanje = dotkanje + 1
-    //if (dotkanje == 3) {mamaspew.play(confighudzba)
+WA.room.onEnterLayer('MiC-dzera').subscribe(()=>{
+    dotkanje = dotkanje + 1
+    if (dotkanje == 3) {mamaspew.play(confighudzba)}
     //WA.chat.sendChatMessage('netko hraje so hudzba', 'Jurij')
     //WA.nav.goToRoom('MiC-Klick-pimper.tmj#cil')
     //WA.nav.goToRoom('MiC-Klick-pimper.tmj#moveTo=0,100')
-//}})
+}),
+
+
+WA.room.onEnterLayer('MiC-stom').subscribe(()=>{
+    WA.room.showLayer('bul')
+    //WA.chat.sendChatMessage('netko hraje so hudzba', 'Jurij')
+    //WA.nav.goToRoom('MiC-Klick-pimper.tmj#cil')
+    //WA.nav.goToRoom('MiC-Klick-pimper.tmj#moveTo=0,100')
+}),
+
 
 // MiC-SprungKilian
 
 WA.room.showLayer('kamjenje')
 
 WA.room.onEnterLayer('MiC-stom').subscribe(() => {
-    console.log('sym pri stomu.') 
-    //WA.room.showLayer('bul')
+    // console.log('sym pri stomu.') 
+    WA.room.showLayer('bul')
 
 })
 WA.room.onEnterLayer('MiC-bul').subscribe(() => {
     console.log('sym pri bulu.')
+    WA.chat.sendChatMessage('připosłuchaj mi dokładnje', 'Jurijo !!!')
+    mamaspew.play(confighudzba)
 })
 
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
