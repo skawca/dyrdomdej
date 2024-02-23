@@ -2,10 +2,10 @@
 
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 import { wulicDistancu } from "./pomocnik/wulic-distancu";
-import {popupNoweWokno} from './akcije/popup';
+import { popupNoweWokno } from './akcije/popup';
 import { teleport } from "./akcije/teleport-simon";
 import { skocDoSwetaKilian } from "./akcije/skok-do-sweta-kilian";
-import {beamMiC} from "./akcije/beaming-karta-MiC";
+import { beamMiC } from "./akcije/beaming-karta-MiC";
 
 
 // definicija wariablow
@@ -38,6 +38,7 @@ teleport()
 skocDoSwetaKilian()
 popupNoweWokno ()
 beamMiC ()
+popupNoweWokno ()
 
 // loggwac sto su koordinaty wot mužika
     WA.player.onPlayerMove((data)=>{
