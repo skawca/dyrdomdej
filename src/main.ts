@@ -3,6 +3,8 @@
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 import { wulicDistancu } from "./pomocnik/wulic-distancu";
 import {popupNoweWokno} from './akcije/popup';
+import { teleport } from "./akcije/teleport-simon";
+import { skocDoSwetaKilian } from "./akcije/skok-do-sweta-kilian";
 
 // definicija wariablow
 let dotkanje = 0
@@ -29,6 +31,9 @@ const confighudzba = {
 
 // Waiting for the API to be ready
 WA.onInit().then(() => {
+
+teleport()
+skocDoSwetaKilian('hin')
 
 // loggwac sto su koordinaty wot mužika
     WA.player.onPlayerMove((data)=>{
