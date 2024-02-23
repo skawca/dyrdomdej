@@ -10,7 +10,7 @@ export const wobydlerjo = () => {
     )
 
     WA.room.onEnterLayer('k-wobydler2').subscribe(() => {
-        if (cheska == 0){
+        if (cheska == 1){
         WA.chat.sendChatMessage('Jowe tejš!', 'Wobydler Simon')
         cheska = 0
         }

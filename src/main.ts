@@ -9,6 +9,7 @@ import {beamMiC} from "./akcije/beaming-karta-MiC";
 import { steveQuest } from "./akcije/steve-quest";
 import { hrow } from "./akcije/hrow";
 import { wobydlerjo } from "./akcije/wobydler";
+import { kirbs } from "./akcije/kirbs";
 
 
 // definicija wariablow
@@ -44,6 +45,7 @@ beamMiC ()
 steveQuest()
 hrow()
 wobydlerjo()
+kirbs()
 
 // loggwac sto su koordinaty wot mužika
     WA.player.onPlayerMove((data)=>{
