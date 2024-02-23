@@ -12,5 +12,8 @@ export const skocDoSwetaKilian = () => {
         WA.nav.goToRoom('Kilian.tmj')
     })
 
+    WA.room.onEnterLayer('Smn-korcma').subscribe(() => {
+        WA.nav.goToRoom('Simon-Korcma.tmj')
+    })
     
 }
