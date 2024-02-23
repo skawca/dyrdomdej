@@ -9,6 +9,7 @@ import { steveQuest } from "./akcije/steve-quest";
 import { hrow } from "./akcije/hrow";
 import { wobydlerjo } from "./akcije/wobydler";
 import { kirbs } from "./akcije/kirbs";
+import { teleportkorcma } from "./akcije/korcma";
 
 // definicija wariablow
 let dotkanje = 0
@@ -44,6 +45,7 @@ steveQuest()
 hrow()
 wobydlerjo()
 kirbs()
+teleportkorcma()
 
 
 // loggwac sto su koordinaty wot mužika
