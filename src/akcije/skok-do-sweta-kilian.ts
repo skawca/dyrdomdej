@@ -1,10 +1,10 @@
-export const skocDoDruhehoSweta = () => {
+export const skocDoSwetaKilian = () => {
+    WA.room.onEnterLayer('Smn-mapKilian').subscribe(() => {
 
-    WA.room.onEnterLayer('mapKilian').subscribe(() => {
         WA.nav.goToRoom('Kilian.tmj')
     })
 
-    WA.room.onEnterLayer('mapGustav').subscribe(() => {
+    WA.room.onEnterLayer('k-mapGustav').subscribe(() => {
         WA.nav.goToRoom('map2.tmj')
         // map2.tmj je wot Simona
     })
