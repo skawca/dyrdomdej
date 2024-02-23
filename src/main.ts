@@ -50,24 +50,24 @@ skocDoSwetaKilian()
     })
 
 // wot jedneho mestna k tamnemu skocic
-WA.room.onEnterLayer('dzera').subscribe(()=>{
-    dotkanje = dotkanje + 1
-    if (dotkanje == 3) {mamaspew.play(confighudzba)
-    WA.chat.sendChatMessage('netko hraje so hudzba', 'Jurij')
+//WA.room.onEnterLayer('dzera').subscribe(()=>{
+    //dotkanje = dotkanje + 1
+    //if (dotkanje == 3) {mamaspew.play(confighudzba)
+    //WA.chat.sendChatMessage('netko hraje so hudzba', 'Jurij')
     //WA.nav.goToRoom('MiC-Klick-pimper.tmj#cil')
     //WA.nav.goToRoom('MiC-Klick-pimper.tmj#moveTo=0,100')
-}})
+//}})
 
 popupNoweWokno ()
 
 WA.room.showLayer('kamjenje')
 
-WA.room.onEnterLayer('stom').subscribe(() => {
+WA.room.onEnterLayer('Smn-stom').subscribe(() => {
     console.log('sym pri stomu.') 
     //WA.room.showLayer('bul')
 
 })
-WA.room.onEnterLayer('bul').subscribe(() => {
+WA.room.onEnterLayer('Smn-bul').subscribe(() => {
     console.log('sym pri bulu.')
 })
 
