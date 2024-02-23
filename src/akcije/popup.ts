@@ -22,7 +22,7 @@ const configtrompeta = {
         }
 
 export const popupNoweWokno = () => {
-WA.ui.openPopup('wokno', 'Konsum', [
+WA.ui.openPopup('MiC-wokno', 'Konsum', [
     {
         // knefl zatwaric
         label:'ćěr so',
@@ -53,7 +53,7 @@ WA.ui.openPopup('wokno', 'Konsum', [
     
 ])
 
-// WA.ui.openPopup('wokno2', 'změn počas', [
+// WA.ui.openPopup('MiC-wokno2', 'změn počas', [
 // {
     // knefl zatwaric
  //    label:'zyma',

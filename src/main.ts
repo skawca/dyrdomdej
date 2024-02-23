@@ -5,6 +5,8 @@ import { wulicDistancu } from "./pomocnik/wulic-distancu";
 import {popupNoweWokno} from './akcije/popup';
 import { teleport } from "./akcije/teleport-simon";
 import { skocDoSwetaKilian } from "./akcije/skok-do-sweta-kilian";
+import {beamMiC} from "./akcije/beaming-karta-MiC";
+
 
 // definicija wariablow
 let dotkanje = 0
@@ -35,6 +37,7 @@ WA.onInit().then(() => {
 teleport()
 skocDoSwetaKilian()
 popupNoweWokno ()
+beamMiC ()
 
 // loggwac sto su koordinaty wot mužika
     WA.player.onPlayerMove((data)=>{

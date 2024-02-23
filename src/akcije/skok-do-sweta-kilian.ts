@@ -1,6 +1,5 @@
 export const skocDoSwetaKilian = () => {
     WA.room.onEnterLayer('Smn-mapKilian').subscribe(() => {
-
         WA.nav.goToRoom('Kilian.tmj')
     })
 
