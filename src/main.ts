@@ -1,7 +1,6 @@
 /// <reference types="@workadventure/iframe-api-typings" />
 
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
-import { wulicDistancu } from "./pomocnik/wulic-distancu";
 import { popupNoweWokno } from './akcije/popup';
 import { teleport } from "./akcije/teleport-simon";
 import { skocDoSwetaKilian } from "./akcije/skok-do-sweta-kilian";
@@ -49,7 +48,7 @@ kirbs()
 
 // loggwac sto su koordinaty wot mužika
     WA.player.onPlayerMove((data)=>{
-    const {x,y, oldX, oldY} = data
+    const {x,y} = data
     // Alternativ const x = data.x
     // Alternativ const y = data.y
 

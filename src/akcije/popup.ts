@@ -1,5 +1,3 @@
-import { TIMEOUT } from "dns"
-
 // soundy a hudzba
 const mamaspew = WA.sound.loadSound('/src/hudzba/mamaspew.mp3')
 const confighudzba = {
@@ -32,7 +30,7 @@ WA.ui.openPopup('MiC-wokno', 'konsola', [
     {
         // knefl zatwaric
         label:'štres',
-        callback: async (popup) => { 
+        callback: async () => { 
       
             //Mužik běži ke koordinaće          
       await WA.player.moveTo(0,0,10);
@@ -50,13 +48,13 @@ WA.ui.openPopup('MiC-wokno', 'konsola', [
     {
         // knefl zatwaric
         label:'spěw',
-        callback: (popup) => {mamaspew.play(confighudzba)}
+        callback: () => {mamaspew.play(confighudzba)}
         // wokno so zacini
     },
     {
         // knefl zatwaric
         label:'trompeta',
-        callback: (popup) => {trompetaspew.play(configtrompeta)}
+        callback: () => {trompetaspew.play(configtrompeta)}
         // wokno so zacini
     },
     
@@ -66,7 +64,7 @@ WA.ui.openPopup('MiC-wokno2', 'změn počas', [
 {
 // knefl zatwaric
 
-    label:'zyma', callback: async (popup) => { 
+    label:'zyma', callback: async () => { 
     // w konsoli pruwowac hac adicija tez funguje 
     console.log (pocas) 
 
