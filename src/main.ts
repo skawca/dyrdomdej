@@ -33,7 +33,7 @@ const confighudzba = {
 WA.onInit().then(() => {
 
 teleport()
-skocDoSwetaKilian('hin')
+skocDoSwetaKilian()
 
 // loggwac sto su koordinaty wot mužika
     WA.player.onPlayerMove((data)=>{
